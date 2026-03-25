@@ -38,10 +38,10 @@ function filter = initFilter(detection)
     % covariance (P).
     
     % Update the initial velocity covariance
-    filter.StateCovariance([2 4 6],[2 4 6]) = 50e4*eye(3);
+    filter.StateCovariance([2 4 6],[2 4 6]) = 1e3*eye(3);
 
     % Update the process noise 
-    filter.ProcessNoise = 1e3*eye(3);
+    filter.ProcessNoise = 10*eye(3);
 end
 %[text] ### Filtering Workflow and Loop
 %[text] In this section, you'll create and initialize a filter using the function defined above. Then, you'll run the filter's prediction and correction steps in a loop to track the object.
